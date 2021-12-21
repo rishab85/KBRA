@@ -1,0 +1,5 @@
+export const FETCH_USER = 'USER/FETCH_USER';
+export const SAVE_USER = 'USER/SAVE_USER';
+export const SET_PAGINATION = 'USER/SET_PAGINATION';
+export const SET_LOADING = 'USER/SET_LOADING';
+export const SET_ERROR = 'USER/SET_ERROR';
