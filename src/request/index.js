@@ -15,10 +15,14 @@ export async function httpRequest(serviceName, options={}){
     storeInstance.dispatch(setLoading(true))
    return  await axios({...otherServiceConfig, ...optionConfig, params: {...params, ...optionParam}})
    .then((res)=>{
+
+    console.log(res, '>>>>>>')
        if(res.error) return storeInstance.dispatch(setError(true))
        return res && res.data
     })
    .catch((e)=>{
+
+    console.log(e, '>>>>>>exception')
        //handle exception globally
        storeInstance.dispatch(setError(true))
    }).finally(()=>{
