@@ -41,7 +41,7 @@ function parseBankAccount(bankAccount) {
     
     return Object.values(combinedNumber).reduce((accum, current)=>{
       const currentChild = numStruct[current.join('')]
-      return `${accum}${currentChild}`
+      return Number(`${accum}${currentChild}`)
      },'');
     
 }
